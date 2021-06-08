@@ -1,0 +1,57 @@
+const head_data = [{
+    "date": 1396010150000,
+    "favorites": 29443,
+    "id": "449525268529815552",
+    "isRetweet": false,
+    "retweets": 22230,
+    "text": "Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes - AUTISM. Many such cases!"
+},
+{
+    "date": 1346165646000,
+    "favorites": 8938,
+    "id": "240462265680289792",
+    "isRetweet": false,
+    "retweets": 8412,
+    "text": ".@ariannahuff is unattractive both inside and out. I lly understand why her former husband left her for a man- he made a good decision."
+},
+{
+    "date": 1377097749000,
+    "favorites": 366,
+    "id": "370200907834597377",
+    "isRetweet": false,
+    "retweets": 422,
+    "text": "The hatchet job in @NYMag about Roger Ailes is total bullshit. He is the ultimate winner who is surrounded by a great team. @FoxNews"
+},
+{
+    "date": 1368063426000,
+    "favorites": 154973,
+    "id": "332308211321425920",
+    "isRetweet": false,
+    "retweets": 124482,
+    "text": "Sorry losers and haters, but my I.Q. is one of the highest -and you all know it! Please don't feel so stupid or insecure,it's not your fault"
+},
+{
+    "date": 1411950079000,
+    "favorites": 81146,
+    "id": "516382177798680576",
+    "isRetweet": false,
+    "retweets": 64424,
+    "text": "Every time I speak of the haters and losers I do so with great love and affection. They cannot help the fact that they were born fucked up!"
+}]
+
+
+$("#portrait").css('cursor', 'pointer')
+$(document).ready(function () {
+    $("#portrait").click(function (event) {
+        var x = event.pageX - this.offsetLeft;
+        var y = event.pageY - this.offsetTop;
+        // 350 < x < 720
+        // 11 < 500
+        if (y > 11 && y < 500 && x > 350 && x < 720) {
+           $("#head_modal").show()
+        }
+
+    });
+});
+
+

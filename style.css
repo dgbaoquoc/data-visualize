@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    position: absolute;
+    opacity: 0.75;
+    background-image: url(./Assets/flag.png);
+    background-color: #cccccc;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1000;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.placeholder {
+    background: white;
+    border-radius: 2px;
+    border: 1px solid #cecece;
+    padding: 24px;
+    text-align: left;
+}
+
+.placeholder .gray {
+    color: gray;
+}
+
+.placeholder .dot {
+    margin: 0 8px;
+}
+
+
+
