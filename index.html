@@ -18,45 +18,171 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 
 <body>
     <div class="banner">
     </div>
-    <h1 class="text-center mb-4 text-uppercase">Why Donald Trump is people’s all-time favorite memes ?</h1>
+    <h1 class="text-center mb-4 text-uppercase" style="text-shadow: 2px 10px 4px rgba(29,29,29,0.5);">Why Donald Trump
+        is people’s all-time favorite memes ?</h1>
     <div class="container-fluid">
-        <div>
+        <div data-toggle="modal" data-target="#head_modal">
             <img id="portrait" src="./Assets/portrait.png" class="center" alt="" ismap>
         </div>
+
+        <!--MODAL-->
         <div class="modal" tabindex="-1" role="dialog" id="head_modal">
             <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                    <div class="placeholder">
-                        <div class="row mb-2">
-                            <div class="col-md-2">
-                                <img src="./Assets/profile-picture.jpg" alt="">    
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Donald J. Trump</h4>
-                                <span class="gray">@realdonaldtrump</span>
-                            </div>
+                <div class="modal-content">
+                    <div class="modal-body container-center">
+                        <div class="title text-center">
+                            <h3>Why Donald Trump is people’s all-time favorite memes?</h3>
                         </div>
-                        <p><span><span class="">Great work by my Administration over the holidays to save Coast Guard pay during this
-                                    #SchumerShutdown. No thanks to the Democrats who left town and are not concerned about the safety and
-                                    security of Americans!</span></span></p>
-                        <div class="gray"><span>Dec 30th 2018 - 11:56:09 AM EST</span><span class="dot">·</span><span>Twitter for
-                                iPhone</span><span class="dot">·</span><span><a class=""
-                                    href="https://twitter.com/realdonaldtrump/status/1079420891807793152" rel="noopener noreferrer"
-                                    target="_blank" title="View on Twitter.com">View on Twitter</a></span></div>
-                     </div>
+                        <div class="content">
+                            <p>Donald Trump has transformed as a result of his Internet presence. In 2016, he was the
+                                internet's candidate—listed he's in the Urban Dictionary's definition of meme god—and
+                                his campaign used Facebook advertising to defeat Hillary Clinton. Since then, he's
+                                gotten even more concerned with small complaints and conspiracy theories that play well
+                                on Twitter, which is utilized by just 22% of the population in the United States.
+                            </p>
+                            <p>
+                                Trump has also had a noticeable impact on the internet. During President Trump's first
+                                term, Americans saw his administration savor the chance to repeal net neutrality, the
+                                foundational concept of free and open internet. “Mr. President”, on the other hand, has
+                                had a far greater influence on the internet than the strangest memes or the longest
+                                Twitter feuds. His administration has altered how Americans connect with one another
+                                online, amplifying the tone of division and distrust, molding conventions and standards,
+                                and instilling the expectation that each day online will be stranger than the last.
+                            </p>
+                            <div class="tweet" id="0_tweet"></div>
+                            <p class="title">
+                                “Meme-god” enters the game.
+                            </p>
+                            <p>
+                                Vic Berger, a Vine artist, created creepy six-second films during the 2016 presidential
+                                primary season, exposing Republican hopefuls as ludicrous. He'd focus on the moments
+                                when they appeared to be the most genuine versions of themselves: Jeb Bush was a
+                                tormented husk of a failed politician who knew words but not human face emotions. Trump
+                                kept repeating statements and making strange physical motions, such as pointing with his
+                                thumbs at individuals. There were a lot of air horns on the scene. The New Yorker dubbed
+                                Berger a "political satirist for the internet election" after millions of people viewed
+                                each tape and expressed their delight in the comments.
+                            </p>
+                            <p>
+                                Trump has indirectly promoted such conduct and has occasionally gladly engaged in the
+                                worst of meme culture. Memes helped him win in 2016, and now other politicians are
+                                expected to follow suit: Memes are just another type of political advertisement that can
+                                be bought. Michael Bloomberg's team spent a lot of money on advertising on prominent
+                                meme accounts when he ran for the Democratic nomination this year, claiming the need to
+                                "meet people where they are and fight with President Trump's tremendous digital
+                                operation."
+                            </p>
+                            <div class="tweet" id="1_tweet"></div>
+
+                            <p class="title">
+                                Donald Trump’s mindset.
+                            </p>
+                            <p>
+                                Trump’s personality is certainly extreme by any standard, and particularly rare for a
+                                presidential candidate; many people who encounter the man—in negotiations or in
+                                interviews or on a debate stage or watching that debate on television—seem to find him
+                                flummoxing.
+                            </p>
+                            <div class="tweet" id="2_tweet"></div>
+
+                            <p class="title">
+                                Anger, along with a sense of humor, is at the core of Trump's appeal:
+                            </p>
+                            <p>
+                                When people with authoritarian tendencies think that their way of life is being
+                                endangered, they may gravitate to strong leaders like Donald Trump who vow to protect
+                                them. High degrees of authoritarianism appeared as the single biggest predictor of
+                                expressing political support for Donald Trump in a recent nationwide poll conducted by
+                                political scientist Matthew MacWilliams. Trump's pledge to build a wall on the Mexican
+                                border to keep illegal immigrants out, as well as his rhetoric against Muslims and other
+                                foreigners, are likely to have exacerbated the situation.
+                            </p>
+                            <p>
+                                Trump plays to an old fear of contagion, which compares out-groups to parasites,
+                                poisons, and other contaminants, as highlighted by social scientist Jesse Graham. In
+                                this aspect, Trump's fear of germs and aversion to body fluids, particularly women's, is
+                                possibly no psychological coincidence. He famously said that Fox News host Megyn Kelly
+                                had "blood running out of her everywhere," and he called Hillary Clinton's restroom
+                                break during a Democratic debate "disgusting." Impurity elicits a basic sense of
+                                disgust. Trump appears to experience more disgust on a daily basis, or at least claims
+                                to, than the majority of people.
+                            </p>
+                            <div class="tweet" id="3_tweet"></div>
+
+                            <p class="title">
+                                People interest in his tweets
+                            </p>
+                            <!--GRAPH-->
+                            <div class="container-fluid">
+                                <div id='plotDiv' style="width: 100%; height: 600px"></div>
+                            </div>
+                            <p>
+                                Other presidents have a habit of speaking in a highly "politician's voice" in public.
+                                However, Donald Trump prefers to engage with the public in a dusty manner, which has
+                                also astonished a great number of foreign observers. We usually see him on Twitter with
+                                criticism on most of the events.
+                            </p>
+                            <p>
+                                Everyone is suspicious of... anything now because of Trump.
+                            </p>
+                            <p>
+                                Alternative facts had not yet been coined in the United States four years ago. They
+                                hadn't yet elected a president who would continuously rail against "fake news" and the
+                                "lamestream media" outlets that spread it. They hadn't yet come across a lifestyle
+                                influencer who said, "Do your own research" when discussing a pandemic that was a fake.
+                                They hadn't seen a president fail to denounce a violent conspiracy community that claims
+                                the Democratic Party is involved in child trafficking and Satanic rituals.
+                            </p>
+                            <p>
+                                According to Renee Hobbs, a communication professor at the University of Rhode Island,
+                                Trump is the "poster child" of false information. “He doesn't respect specialists of
+                                proof; instead, he trusts his instincts, and he displays the attraction of that.” He
+                                smears the media, promotes conspiracy theories, and lies about fundamental facts.
+                                However, Trump's anti-truth stance has backfired in several respects.“Fake news” has
+                                been “good for the conversation” in general. Even though many of them are spouting it
+                                about aimlessly, the catchphrase has made more people aware of the need for media
+                                literacy.
+                            </p>
+
+                            <div class="tweet" id="4_tweet"></div>
+                            <p class="title">
+                                The closure of @realDonaldTrump...
+                            </p>
+                            <p>
+                                After our “meme god’, Donald Trump got his administration downgraded. Twitter has
+                                officially banned his account stand bt @realDonaldTrump with 88 million followers due to
+                                the danger of additional incitement of violence following a thorough examination of
+                                recent Tweets from the account and the context around them — specifically, how they are
+                                being received and perceived on and off Twitter.
+                            </p>
+                            <p>
+                                Twitter has taken action against the president's account for the second time in a week.
+                                Following a violent protest at the Capitol, Twitter erased three tweets that pushed
+                                conspiracy theories about the election and froze Trump's account on Wednesday, claiming
+                                "a danger of violence". Trump's official @POTUS account is still online, but if Twitter
+                                believes he's using it to circumvent the ban, it will take steps to limit its usage,
+                                according to a Twitter representative.
+                            </p>
+                            <p>
+                                That's the end of a meme. This will undoubtedly be etched in our minds.
+                            </p>
+                            <div class="tweet" id="5_tweet"></div>
+
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-    
+        </div>
+
     </div>
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="head_data.json"></script>
